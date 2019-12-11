@@ -19,8 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -46,18 +44,129 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+// END OF RESET STYLES
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+// VARIABLES HERE
+@bg-color: #EDF0EE; // White
+@section-color: #189AB4; // Blue grotto
+@header-color: #75E6DA; // Blue green
+@text-color: #606462; // Cool gray
+
+// MIXINS HERE
+.centered-header() {
+	text-align: center;
+	font-size: 2rem;
+	padding: 2%;
 }
 
 // GENERAL STYLES
-html, body {
-	height: 100%;
+* {
+	box-sizing: border-box;
+	border: 1px solid black;
+	max-width: 100%;
 }
 html {
 	font-size: 62.5%;
+	background-color: @bg-color;
+	
+}
+.main-container {
+	width: 80%;
+	margin: 0 auto;
 }
 
-// set list-style-type: none; for no bullets
+// HEADER STYLES
+#header {
+	margin-bottom: 4%;
+
+	nav {
+		height: 15vh;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		@media (max-width: 500px) {
+			height: 50%;
+			flex-direction: column;
+		}
+
+		a {
+			width: 15%;
+			text-decoration: none;
+			color: @text-color;
+			.centered-header();
+		}
+	}
+
+	.header-content {
+		position: relative;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+		.header-text {
+			position: absolute;
+			height: 40%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			.centered-header();
+			color: @bg-color;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
+	}
+
+}
+
+// MAIN SECTION STYLES
+#main-section {
+	height: 50vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0% 2%;
+
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+
+	.main-left {
+		height: 90%;
+		width: 40%;
+
+		img {
+
+		}
+		.main-text {
+			font-size: 1.6rem;
+		}
+
+	}
+	.main-right {
+		height: 90%;
+		width: 40%;
+
+		h3 {
+			.centered-header();
+		}
+		ul {
+			height: 80%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+
+}
+
+// EXPERIENCE SECTION STYLES
+
+
+// CONTACT SECTION STYLES
+
+
+
