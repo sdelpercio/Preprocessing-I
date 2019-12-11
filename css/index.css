@@ -125,12 +125,12 @@ table {
 }
 * {
   box-sizing: border-box;
-  border: 1px solid black;
   max-width: 100%;
 }
 html {
   font-size: 62.5%;
   background-color: #EDF0EE;
+  line-height: 2;
 }
 .main-container {
   width: 80%;
@@ -145,6 +145,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 @media (max-width: 500px) {
   #header nav {
@@ -156,6 +157,7 @@ html {
   width: 15%;
   text-decoration: none;
   color: #606462;
+  cursor: pointer;
   text-align: center;
   font-size: 2rem;
   padding: 2%;
@@ -166,6 +168,7 @@ html {
 #header .header-content img {
   height: auto;
   width: 100%;
+  border-radius: 5px;
 }
 #header .header-content .header-text {
   position: absolute;
@@ -182,11 +185,11 @@ html {
   justify-content: space-evenly;
 }
 #main-section {
-  height: 50vh;
+  height: 80vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0% 2%;
+  color: #606462;
 }
 @media (max-width: 500px) {
   #main-section {
@@ -195,23 +198,56 @@ html {
 }
 #main-section .main-left {
   height: 90%;
-  width: 40%;
+  width: 45%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #189AB4;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+#main-section .main-left img {
+  width: 60%;
+  height: auto;
+  border: 1px solid #189AB4;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
 }
 #main-section .main-left .main-text {
   font-size: 1.6rem;
+  padding: 1%;
+  height: 30%;
+}
+#main-section .main-left .main-text h3 {
+  margin-bottom: 8%;
+}
+#main-section .main-left .main-text p {
+  height: 70%;
 }
 #main-section .main-right {
   height: 90%;
-  width: 40%;
+  width: 45%;
+  border: 1px solid #189AB4;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
 }
 #main-section .main-right h3 {
+  height: 10%;
   text-align: center;
   font-size: 2rem;
   padding: 2%;
+  border-bottom: 1px solid #189AB4;
 }
 #main-section .main-right ul {
-  height: 80%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+#main-section .main-right ul li {
+  font-size: 1.6rem;
+  list-style-type: circle;
+  margin-left: 15%;
 }
