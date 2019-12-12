@@ -160,6 +160,11 @@ html {
   padding: 2%;
   color: #00493A;
 }
+@media (max-width: 500px) {
+  #header nav a {
+    width: 50%;
+  }
+}
 #header .header-content {
   position: relative;
 }
@@ -194,6 +199,7 @@ html {
 @media (max-width: 500px) {
   #main-section {
     flex-direction: column;
+    height: 140vh;
   }
 }
 #main-section .main-left {
@@ -207,6 +213,11 @@ html {
   border: 1px solid #189AB4;
   border-radius: 5px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 500px) {
+  #main-section .main-left {
+    width: 100%;
+  }
 }
 #main-section .main-left img {
   width: 50%;
@@ -233,6 +244,11 @@ html {
   border: 1px solid #189AB4;
   border-radius: 5px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 500px) {
+  #main-section .main-right {
+    width: 100%;
+  }
 }
 #main-section .main-right h3 {
   height: 10%;

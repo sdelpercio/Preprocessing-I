@@ -102,6 +102,10 @@ html {
 			color: @text-color;
 			cursor: pointer;
 			.centered-header();
+
+			@media (max-width: 500px) {
+				width: 50%;
+			}
 		}
 	}
 
@@ -140,6 +144,7 @@ html {
 
 	@media (max-width: 500px) {
 		flex-direction: column;
+		height: 140vh;
 	}
 
 	.main-left {
@@ -152,17 +157,18 @@ html {
 		align-items: center;
 		.section-border();
 
+		@media (max-width: 500px) {
+			width: 100%;
+		}
+
 		img {
 			width: 50%;
 			height: auto;
 			.section-border();
-			
-			
 		}
 		.main-text {
 			font-size: 1.6rem;
 			padding: 1%;
-			
 			height: 50%;
 
 			h3 {
@@ -179,6 +185,10 @@ html {
 		height: 90%;
 		width: 45%;
 		.section-border();
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 
 		h3 {
 			height: 10%;
